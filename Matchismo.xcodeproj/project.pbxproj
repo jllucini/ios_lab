@@ -25,6 +25,7 @@
 		88593E9B19920E8D00C19703 /* PlayingCard.m in Sources */ = {isa = PBXBuildFile; fileRef = 88593E9A19920E8D00C19703 /* PlayingCard.m */; };
 		88593EA1199213AC00C19703 /* Deck.m in Sources */ = {isa = PBXBuildFile; fileRef = 88593EA0199213AC00C19703 /* Deck.m */; };
 		88593EA41992170600C19703 /* PlayingCardDeck.m in Sources */ = {isa = PBXBuildFile; fileRef = 88593EA31992170600C19703 /* PlayingCardDeck.m */; };
+		8875451F1993D8C90077410B /* CardMatchingGame.m in Sources */ = {isa = PBXBuildFile; fileRef = 8875451E1993D8C90077410B /* CardMatchingGame.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,8 @@
 		88593EA0199213AC00C19703 /* Deck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Deck.m; path = Matchismo/Model/Deck.m; sourceTree = "<group>"; };
 		88593EA21992170600C19703 /* PlayingCardDeck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PlayingCardDeck.h; path = Matchismo/Model/PlayingCardDeck.h; sourceTree = "<group>"; };
 		88593EA31992170600C19703 /* PlayingCardDeck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PlayingCardDeck.m; path = Matchismo/Model/PlayingCardDeck.m; sourceTree = "<group>"; };
+		8875451D1993D8C90077410B /* CardMatchingGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CardMatchingGame.h; path = Matchismo/Model/CardMatchingGame.h; sourceTree = "<group>"; };
+		8875451E1993D8C90077410B /* CardMatchingGame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CardMatchingGame.m; path = Matchismo/Model/CardMatchingGame.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,6 +171,8 @@
 		88593E9819920BC600C19703 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				8875451D1993D8C90077410B /* CardMatchingGame.h */,
+				8875451E1993D8C90077410B /* CardMatchingGame.m */,
 				88593E9F199213AC00C19703 /* Deck.h */,
 				88593EA0199213AC00C19703 /* Deck.m */,
 				88593EA21992170600C19703 /* PlayingCardDeck.h */,
@@ -283,6 +288,7 @@
 				88593E771991738500C19703 /* CardGameViewController.m in Sources */,
 				88593E6D1991738500C19703 /* main.m in Sources */,
 				88593E9B19920E8D00C19703 /* PlayingCard.m in Sources */,
+				8875451F1993D8C90077410B /* CardMatchingGame.m in Sources */,
 				88593EA41992170600C19703 /* PlayingCardDeck.m in Sources */,
 				88593EA1199213AC00C19703 /* Deck.m in Sources */,
 				88593E9719920B8300C19703 /* Card.m in Sources */,
@@ -490,6 +496,7 @@
 				88593E911991738500C19703 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		88593E921991738500C19703 /* Build configuration list for PBXNativeTarget "MatchismoTests" */ = {
 			isa = XCConfigurationList;
@@ -498,6 +505,7 @@
 				88593E941991738500C19703 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

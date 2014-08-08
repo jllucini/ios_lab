@@ -10,6 +10,28 @@
 
 @implementation PlayingCard
 
+-(int)match:(NSArray *)otherCards
+{
+    int score = 0;
+    NSMutableArray *auxCards = [[NSMutableArray alloc] initWithArray:otherCards];
+    [auxCards insertObject:self atIndex:0];
+    int nCards = [auxCards count];
+    
+    for (int sourceCardIx = 0; sourceCardIx < nCards ; sourceCardIx++){
+        PlayingCard *sourceCard = auxCards[sourceCardIx];
+        for (int cardToCompareIx = sourceCardIx + 1; cardToCompareIx < nCards ; cardToCompareIx++){
+            PlayingCard *cardToCompare = auxCards[cardToCompareIx];
+            if (sourceCard.rank == cardToCompare.rank){
+                score += 4;
+            } else if ([sourceCard.suit isEqualToString:cardToCompare.suit]){
+                score += 1;
+            }
+        }
+    }
+    
+    return score;
+}
+
 - (NSString *)contents
 {
     return [[PlayingCard rankStrings][self.rank] stringByAppendingString:self.suit];
