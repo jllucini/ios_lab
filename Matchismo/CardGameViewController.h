@@ -6,8 +6,8 @@
 //  Copyright (c) 2014 JLLucini. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "AbstractGameViewController.h"
 
-@interface CardGameViewController : UIViewController
+@interface CardGameViewController : AbstractGameViewController
 
 @end

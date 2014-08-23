@@ -20,4 +20,9 @@
     }
     return score;
 }
+
+-(NSString *)explainMatch:(NSArray *)otherCards
+{
+    return ([self match:otherCards]) ? @"Cards match !": @"Cards do not match !";
+}
 @end

@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "Deck.h"
 #import "Card.h"
+#import "ScoreHelper.h"
 
 @interface CardMatchingGame : NSObject
 
@@ -17,10 +18,9 @@
                        usingDeck:(Deck *)deck;
 
 -(void)chooseCardAtIndex:(NSUInteger)index;
--(Card *)cardAtIndex:(NSUInteger)index;
+-(id)cardAtIndex:(NSUInteger)index;
 
-@property (nonatomic,readonly) NSInteger score;
 @property (nonatomic) NSUInteger gameMode;
-@property (nonatomic, readonly) NSString *scoreDescr;
+@property (nonatomic, readonly) ScoreHelper *scoreHelper;
 
 @end

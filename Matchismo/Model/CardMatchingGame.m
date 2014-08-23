@@ -9,22 +9,23 @@
 #import "CardMatchingGame.h"
 
 @interface CardMatchingGame()
-@property (nonatomic, readwrite) NSInteger score;
-@property (nonatomic, readwrite) NSString *scoreDescr;
+@property (nonatomic, readwrite) ScoreHelper *scoreHelper;
 @property (nonatomic, strong) NSMutableArray *cards; // of Cards
 @end
 
 @implementation CardMatchingGame
 
-- (NSString *)scoreDescr
-{
-    return _scoreDescr ? _scoreDescr : @"";
-}
 
 -(NSMutableArray *)cards
 {
     if (!_cards) _cards = [[NSMutableArray alloc] init];
     return _cards;
+}
+
+-(ScoreHelper *)scoreHelper
+{
+    if (!_scoreHelper) _scoreHelper = [[ScoreHelper alloc] init];
+    return _scoreHelper;
 }
 
 -(instancetype)initWithCardCount:(NSUInteger)count
@@ -48,7 +49,7 @@
     return self;
 }
 
--(Card *)cardAtIndex:(NSUInteger)index
+-(id)cardAtIndex:(NSUInteger)index
 {
     return (index < [self.cards count]) ? self.cards[index] : nil;
 }
@@ -58,47 +59,57 @@ static const int COST_TO_CHOOSE = 1;
 
 -(void)chooseCardAtIndex:(NSUInteger)index
 {
+    // Auxiliar variables
     int MISMATCH_PENALTY = self.gameMode;
+    NSMutableString *matchMessage = [NSMutableString stringWithString:@""];
+    NSMutableArray *otherCards = [NSMutableArray array];
+    int matchScore = 0;
+    int totalScore = self.scoreHelper.totalScore;
+    // Match Algorithm
     Card *card = [self cardAtIndex:index];
     if (!card.isMatched){
         if (card.isChosen){
+            // Deselects current card
             card.chosen = NO;
         } else {
             // match against other chosen card
-            NSMutableArray *otherCards = [NSMutableArray array];
             for (Card *otherCard in self.cards) {
                 if (otherCard.isChosen && !otherCard.isMatched) {
                     [otherCards addObject:otherCard];
                 }
             }
-            NSMutableString *matchMessage = [NSMutableString stringWithString:@""];
             if ([otherCards count] +1 == self.gameMode) {
-                int matchScore = [card match:otherCards];
-                //NSLog(@"Match Score: %d",matchScore);
+                matchScore = [card match:otherCards];
+                [matchMessage appendFormat:@"%@", [card explainMatch:otherCards]];
                 if (matchScore) {
-                    [matchMessage appendFormat:@"Matched %@", card.contents];
-                    self.score += matchScore * MATCH_BONUS;
+                    matchScore = matchScore * MATCH_BONUS;
                     card.matched = YES;
                     for (Card *otherCard in otherCards) {
                         otherCard.matched = YES;
-                        [matchMessage appendFormat:@" %@", otherCard.contents];
                     }
-                    [matchMessage appendFormat:@" for %d point.", matchScore * MATCH_BONUS];
+                    [matchMessage appendFormat:@" for %d point!", matchScore ];
                 } else {
-                    [matchMessage appendFormat:@"%@", card.contents];
-                    self.score -= MISMATCH_PENALTY;
+                    matchScore = -MISMATCH_PENALTY;
                     for (Card *otherCard in otherCards) {
                         otherCard.chosen = NO;
-                        [matchMessage appendFormat:@" %@", otherCard.contents];
                     }
-                    [matchMessage appendFormat:@" don't match! %d point penalty!", MISMATCH_PENALTY];
+                    if ([matchMessage length] > 0) {
+                        [matchMessage appendFormat:@" %d point penalty!", MISMATCH_PENALTY];
+                    } else {
+                        [matchMessage appendFormat:@"Cards don't match, %d point penalty!", MISMATCH_PENALTY];
+                    }
                 }
+
             }
-            self.score -= COST_TO_CHOOSE;
+            // Not needed in this assignment
+            // self.score -= COST_TO_CHOOSE;
             card.chosen = YES;
-            self.scoreDescr = matchMessage;
         }
     }
+    // Update Score Helper status
+    totalScore += matchScore;
+    [otherCards addObject:card];
+    [self.scoreHelper setData:totalScore lastScore:matchScore descr:matchMessage cards:otherCards];
 }
 
 

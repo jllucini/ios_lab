@@ -8,11 +8,16 @@
 
 #import "PlayingCard.h"
 
+@interface PlayingCard()
+@property (strong, nonatomic) NSMutableString *matchMessage;
+@end
+
 @implementation PlayingCard
 
 -(int)match:(NSArray *)otherCards
 {
     int score = 0;
+    self.matchMessage = [NSMutableString stringWithString:@""];
     NSMutableArray *auxCards = [[NSMutableArray alloc] initWithArray:otherCards];
     [auxCards insertObject:self atIndex:0];
     int nCards = [auxCards count];
@@ -23,13 +28,20 @@
             PlayingCard *cardToCompare = auxCards[cardToCompareIx];
             if (sourceCard.rank == cardToCompare.rank){
                 score += 4;
+                [self.matchMessage appendFormat:@"Matched %@ %@,", sourceCard.contents, cardToCompare.contents];
             } else if ([sourceCard.suit isEqualToString:cardToCompare.suit]){
                 score += 1;
+                [self.matchMessage appendFormat:@"Matched %@ %@,", sourceCard.contents, cardToCompare.contents];
             }
         }
     }
     
     return score;
+}
+
+-(NSString *)explainMatch:(NSArray *)otherCards
+{
+    return self.matchMessage;
 }
 
 - (NSString *)contents
@@ -40,7 +52,9 @@
 @synthesize suit=_suit;
 + (NSArray *)validSuits
 {
-    return @[@"♣", @"♠", @"♦", @"♥"];}
+    return @[@"♣", @"♠", @"♦", @"♥"];
+}
+
 - (void)setSuit:(NSString *)suit
 {
     if ([[PlayingCard validSuits] containsObject:suit]){
