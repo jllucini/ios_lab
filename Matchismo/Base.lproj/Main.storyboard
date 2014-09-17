@@ -8,6 +8,7 @@
         <scene sceneID="QQU-Tn-OJT">
             <objects>
                 <tabBarController definesPresentationContext="YES" id="jvM-7V-tzr" sceneMemberID="viewController">
+                    <extendedEdge key="edgesForExtendedLayout"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="B5h-cR-DMG">
                         <rect key="frame" x="129" y="330" width="163" height="49"/>
@@ -15,408 +16,43 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="URs-ea-OMW" kind="relationship" relationship="viewControllers" id="yOp-Jh-fXX"/>
-                        <segue destination="bzG-6Q-8Da" kind="relationship" relationship="viewControllers" id="rhE-sF-5Jh"/>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="viewControllers" id="Dnq-CI-guq"/>
+                        <segue destination="AGj-G5-JLf" kind="relationship" relationship="viewControllers" id="dG9-F2-fkG"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qhu-vE-STJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1056" y="-224"/>
-        </scene>
-        <!--History View Controller-->
-        <scene sceneID="D9m-3U-Ztf">
-            <objects>
-                <viewController id="1Bb-Dz-AuM" customClass="HistoryViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="fG6-RO-bzA"/>
-                        <viewControllerLayoutGuide type="bottom" id="pvp-8p-vcx"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="kOa-Ca-Zfm">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Last scores:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Azl-HN-92K">
-                                <rect key="frame" x="113" y="75" width="94" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="aaaa" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t4t-fo-WVl">
-                                <rect key="frame" x="20" y="109" width="280" height="312"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <accessibility key="accessibilityConfiguration">
-                                    <accessibilityTraits key="traits" none="YES" updatesFrequently="YES"/>
-                                </accessibility>
-                                <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="24"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                        </subviews>
-                        <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.25098040700000002" alpha="1" colorSpace="calibratedRGB"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="ouk-5B-7uN"/>
-                    <connections>
-                        <outlet property="historyTextView" destination="t4t-fo-WVl" id="Sw2-Wq-fOh"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="CKC-1Y-j0h" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="549" y="-425"/>
+            <point key="canvasLocation" x="-1008" y="-228"/>
         </scene>
         <!--Card Game View Controller - Card Game-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
                 <viewController title="Card Game" id="vXZ-lx-hvc" customClass="CardGameViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Kqd-Jc-cnT"/>
-                        <viewControllerLayoutGuide type="bottom" id="cBv-bO-uhp"/>
+                        <viewControllerLayoutGuide type="top" id="xMX-Wd-r9N"/>
+                        <viewControllerLayoutGuide type="bottom" id="nQ8-hA-ksu"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="stX-hG-wZp">
-                                <rect key="frame" x="20" y="69" width="40" height="50"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score: 0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4AK-jx-Qxs">
+                                <rect key="frame" x="198" y="369" width="102" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" backgroundImage="cardback">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="touchCardButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="UxA-by-Mmy"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v2a-Ld-cy2">
-                                <rect key="frame" x="68" y="69" width="40" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" backgroundImage="cardback">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="touchCardButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="g2Y-re-kby"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KZH-WO-6cR">
-                                <rect key="frame" x="116" y="69" width="40" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" backgroundImage="cardback">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="touchCardButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="BYa-3H-caM"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qFO-C1-CQJ">
-                                <rect key="frame" x="164" y="69" width="40" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" backgroundImage="cardback">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="touchCardButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Icc-pq-x4h"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R2h-Lx-IYY">
-                                <rect key="frame" x="212" y="69" width="40" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" backgroundImage="cardback">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="touchCardButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Xyu-Rn-CaU"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D2q-XO-WTB">
-                                <rect key="frame" x="20" y="127" width="40" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" backgroundImage="cardback">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="touchCardButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="m1p-zv-U1r"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DbU-3i-L8i">
-                                <rect key="frame" x="68" y="127" width="40" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" backgroundImage="cardback">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="touchCardButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Cv6-nK-Sfu"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bc4-6E-4MD">
-                                <rect key="frame" x="116" y="127" width="40" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" backgroundImage="cardback">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="touchCardButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="O8I-4w-dNS"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xeD-G5-J1Z">
-                                <rect key="frame" x="164" y="127" width="40" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" backgroundImage="cardback">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="touchCardButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="DwI-Rl-NZI"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kzU-6S-9a0">
-                                <rect key="frame" x="212" y="127" width="40" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" backgroundImage="cardback">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="touchCardButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Iih-me-ybJ"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y7i-YI-BFs">
-                                <rect key="frame" x="260" y="69" width="40" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" backgroundImage="cardback">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="touchCardButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="4Sm-U5-81Q"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lhq-aZ-LGQ">
-                                <rect key="frame" x="260" y="127" width="40" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" backgroundImage="cardback">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="touchCardButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="x0N-HG-usz"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dX3-8E-jY4">
-                                <rect key="frame" x="20" y="184" width="40" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" backgroundImage="cardback">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="touchCardButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="pdB-c9-An8"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bhq-IN-hiO">
-                                <rect key="frame" x="68" y="184" width="40" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" backgroundImage="cardback">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="touchCardButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Lka-o7-RNi"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LGl-oG-MH1">
-                                <rect key="frame" x="116" y="184" width="40" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" backgroundImage="cardback">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="touchCardButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="jHE-ri-JQq"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PO1-Wq-UFj">
-                                <rect key="frame" x="164" y="184" width="40" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" backgroundImage="cardback">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="touchCardButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="3Oo-oW-9bC"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gWx-1p-mGk">
-                                <rect key="frame" x="212" y="184" width="40" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" backgroundImage="cardback">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="touchCardButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="GnH-ar-r0K"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4uN-xG-1L2">
-                                <rect key="frame" x="21" y="242" width="40" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" backgroundImage="cardback">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="touchCardButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="oiy-pC-ec9"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8wN-zo-ZPL">
-                                <rect key="frame" x="68" y="242" width="40" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" backgroundImage="cardback">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="touchCardButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="DQh-DZ-vmj"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ijW-SI-2c3">
-                                <rect key="frame" x="116" y="242" width="40" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" backgroundImage="cardback">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="touchCardButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="G5g-I5-k9A"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GcY-YN-zza">
-                                <rect key="frame" x="164" y="242" width="40" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" backgroundImage="cardback">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="touchCardButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="1ih-U4-Ysj"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jx4-Te-HXF">
-                                <rect key="frame" x="212" y="242" width="40" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" backgroundImage="cardback">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="touchCardButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="s5d-h3-TcF"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9aa-ai-inh">
-                                <rect key="frame" x="260" y="184" width="40" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" backgroundImage="cardback">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="touchCardButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="VZT-gW-0lC"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UR2-jp-caG">
-                                <rect key="frame" x="260" y="242" width="40" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" backgroundImage="cardback">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="touchCardButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="rPQ-64-rrz"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tnr-yu-stG">
-                                <rect key="frame" x="21" y="300" width="40" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" backgroundImage="cardback">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="touchCardButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="rPM-XW-JzS"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="376-pq-tMd">
-                                <rect key="frame" x="68" y="300" width="40" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" backgroundImage="cardback">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="touchCardButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="4NG-W6-ziw"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lga-F6-gXy">
-                                <rect key="frame" x="116" y="300" width="40" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" backgroundImage="cardback">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="touchCardButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="mMs-95-gdt"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nN4-Tg-Vag">
-                                <rect key="frame" x="165" y="300" width="40" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" backgroundImage="cardback">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="touchCardButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="9OY-hp-49O"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GKs-Md-cA2">
-                                <rect key="frame" x="212" y="300" width="40" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" backgroundImage="cardback">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="touchCardButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Enk-pn-hlv"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tjo-sl-t6Z">
-                                <rect key="frame" x="260" y="300" width="40" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" backgroundImage="cardback">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="touchCardButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="jAR-Np-Bu1"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Score: 0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4AK-jx-Qxs">
-                                <rect key="frame" x="165" y="369" width="136" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="102" id="iVt-WX-6E1"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aMT-JP-dcV">
-                                <rect key="frame" x="21" y="364" width="70" height="31"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aMT-JP-dcV">
+                                <rect key="frame" x="20" y="365" width="70" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.0019772407887836325" green="0.95599489795918369" blue="0.0030677278393726726" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="70" id="cDu-OM-0Ts"/>
+                                </constraints>
                                 <state key="normal" title="Deal">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -425,269 +61,112 @@
                                     <action selector="resetUI:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="jG4-Ao-dmI"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GfR-Iq-6Yh">
-                                <rect key="frame" x="20" y="404" width="280" height="21"/>
+                            <collectionView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="wLF-DS-Fw4">
+                                <rect key="frame" x="20" y="28" width="280" height="329"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="0.25098040700000002" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ENZ-ij-Oqp">
+                                    <size key="itemSize" width="60" height="40"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PlayingCellID" id="CIr-DB-Rch">
+                                        <rect key="frame" x="0.0" y="0.0" width="40" height="60"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="40" height="60"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <size key="customSize" width="40" height="60"/>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GfR-Iq-6Yh">
+                                <rect key="frame" x="20" y="403" width="280" height="20"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.25098040700000002" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="oIU-1f-8qw"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <color key="textColor" red="0.0019772407889999998" green="0.95599489800000004" blue="0.0030677278389999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.50196081399917603" blue="0.25098040699958801" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="GfR-Iq-6Yh" firstAttribute="top" secondItem="aMT-JP-dcV" secondAttribute="bottom" constant="8" symbolic="YES" id="E7r-zq-LVs"/>
+                            <constraint firstItem="4AK-jx-Qxs" firstAttribute="trailing" secondItem="wLF-DS-Fw4" secondAttribute="trailing" id="EVL-Nh-4UY"/>
+                            <constraint firstItem="GfR-Iq-6Yh" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="20" symbolic="YES" id="F0G-GZ-w80"/>
+                            <constraint firstAttribute="trailing" secondItem="GfR-Iq-6Yh" secondAttribute="trailing" constant="20" symbolic="YES" id="Gdg-BR-est"/>
+                            <constraint firstItem="aMT-JP-dcV" firstAttribute="leading" secondItem="wLF-DS-Fw4" secondAttribute="leading" id="LxB-r8-PyQ"/>
+                            <constraint firstItem="4AK-jx-Qxs" firstAttribute="centerY" secondItem="aMT-JP-dcV" secondAttribute="centerY" constant="-0.5" id="NiY-xd-jDX"/>
+                            <constraint firstItem="aMT-JP-dcV" firstAttribute="top" secondItem="wLF-DS-Fw4" secondAttribute="bottom" constant="8" symbolic="YES" id="RR2-GR-8x1"/>
+                            <constraint firstItem="aMT-JP-dcV" firstAttribute="baseline" secondItem="4AK-jx-Qxs" secondAttribute="baseline" id="RR2-c5-Cw2"/>
+                            <constraint firstItem="wLF-DS-Fw4" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="20" symbolic="YES" id="TcW-Vh-tkS"/>
+                            <constraint firstAttribute="trailing" secondItem="wLF-DS-Fw4" secondAttribute="trailing" constant="20" symbolic="YES" id="WDK-kc-eKK"/>
+                            <constraint firstItem="wLF-DS-Fw4" firstAttribute="top" secondItem="xMX-Wd-r9N" secondAttribute="bottom" constant="20" symbolic="YES" id="dMq-Ze-yRn"/>
+                            <constraint firstAttribute="centerX" secondItem="GfR-Iq-6Yh" secondAttribute="centerX" id="tDc-23-Z9P"/>
+                            <constraint firstItem="nQ8-hA-ksu" firstAttribute="top" secondItem="GfR-Iq-6Yh" secondAttribute="bottom" priority="1" constant="20" symbolic="YES" id="u2c-iy-cq5"/>
+                        </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Card Game" id="tTB-XJ-HX7"/>
                     <navigationItem key="navigationItem" title="Card Game" id="uLm-Fu-CoA">
-                        <barButtonItem key="rightBarButtonItem" title="History" id="SS2-RX-j6c">
-                            <connections>
-                                <segue destination="1Bb-Dz-AuM" kind="push" id="cVj-Tv-4ny"/>
-                            </connections>
-                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="History" id="SS2-RX-j6c"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="grid" destination="wLF-DS-Fw4" id="nOL-Tr-fpp"/>
                         <outlet property="msgArea" destination="GfR-Iq-6Yh" id="dJs-xq-5Cy"/>
                         <outlet property="scoreLabel" destination="4AK-jx-Qxs" id="BoC-EO-k4s"/>
-                        <outletCollection property="cardButtons" destination="stX-hG-wZp" id="70m-Es-7ZF"/>
-                        <outletCollection property="cardButtons" destination="v2a-Ld-cy2" id="7vZ-yY-b3g"/>
-                        <outletCollection property="cardButtons" destination="KZH-WO-6cR" id="93R-xs-HsL"/>
-                        <outletCollection property="cardButtons" destination="qFO-C1-CQJ" id="dWC-0f-7Yq"/>
-                        <outletCollection property="cardButtons" destination="R2h-Lx-IYY" id="rU5-kX-vEU"/>
-                        <outletCollection property="cardButtons" destination="D2q-XO-WTB" id="Iq6-Rg-C2j"/>
-                        <outletCollection property="cardButtons" destination="DbU-3i-L8i" id="qt1-dr-ffl"/>
-                        <outletCollection property="cardButtons" destination="bc4-6E-4MD" id="efY-Ge-QSI"/>
-                        <outletCollection property="cardButtons" destination="xeD-G5-J1Z" id="htR-Hb-GV7"/>
-                        <outletCollection property="cardButtons" destination="kzU-6S-9a0" id="dbh-p4-fhQ"/>
-                        <outletCollection property="cardButtons" destination="y7i-YI-BFs" id="TaG-jx-lRU"/>
-                        <outletCollection property="cardButtons" destination="lhq-aZ-LGQ" id="jU9-EO-pza"/>
-                        <outletCollection property="cardButtons" destination="dX3-8E-jY4" id="bv8-0j-Z1j"/>
-                        <outletCollection property="cardButtons" destination="bhq-IN-hiO" id="Pez-W6-tpV"/>
-                        <outletCollection property="cardButtons" destination="LGl-oG-MH1" id="YBI-X7-yrV"/>
-                        <outletCollection property="cardButtons" destination="PO1-Wq-UFj" id="mSw-QW-fDh"/>
-                        <outletCollection property="cardButtons" destination="gWx-1p-mGk" id="Mb4-Ge-DNc"/>
-                        <outletCollection property="cardButtons" destination="9aa-ai-inh" id="Q5Z-eo-UNO"/>
-                        <outletCollection property="cardButtons" destination="4uN-xG-1L2" id="fnI-Kz-MVW"/>
-                        <outletCollection property="cardButtons" destination="8wN-zo-ZPL" id="g4O-Ht-v6t"/>
-                        <outletCollection property="cardButtons" destination="ijW-SI-2c3" id="ja7-iF-3wF"/>
-                        <outletCollection property="cardButtons" destination="GcY-YN-zza" id="BJm-5m-fDz"/>
-                        <outletCollection property="cardButtons" destination="jx4-Te-HXF" id="xMI-Ut-b4O"/>
-                        <outletCollection property="cardButtons" destination="UR2-jp-caG" id="bkw-1O-7Fu"/>
-                        <outletCollection property="cardButtons" destination="tnr-yu-stG" id="QHg-w0-NVg"/>
-                        <outletCollection property="cardButtons" destination="376-pq-tMd" id="0Rc-zb-ZLA"/>
-                        <outletCollection property="cardButtons" destination="lga-F6-gXy" id="Brg-mE-mQL"/>
-                        <outletCollection property="cardButtons" destination="nN4-Tg-Vag" id="caO-yy-rUe"/>
-                        <outletCollection property="cardButtons" destination="GKs-Md-cA2" id="1hw-gI-v4e"/>
-                        <outletCollection property="cardButtons" destination="Tjo-sl-t6Z" id="f4t-V5-reQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="89" y="-754"/>
+            <point key="canvasLocation" x="-565" y="-516"/>
         </scene>
         <!--Set Game View Controller - Set Game-->
         <scene sceneID="uE7-Xv-7Bi">
             <objects>
                 <viewController title="Set Game" id="AGj-G5-JLf" customClass="SetGameViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="aBZ-ff-kQT"/>
-                        <viewControllerLayoutGuide type="bottom" id="Lub-W2-9ue"/>
+                        <viewControllerLayoutGuide type="top" id="Tmt-kL-EU1"/>
+                        <viewControllerLayoutGuide type="bottom" id="ypp-uj-CwQ"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="1U6-80-Ytn">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Score: 0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gSl-sQ-G6C">
-                                <rect key="frame" x="166" y="367" width="134" height="21"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score: 0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gSl-sQ-G6C">
+                                <rect key="frame" x="198" y="369" width="102" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="102" id="aXZ-5h-60R"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="czQ-NP-Muv">
-                                <rect key="frame" x="20" y="403" width="280" height="21"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="czQ-NP-Muv">
+                                <rect key="frame" x="20" y="402" width="280" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.25098040699958801" green="0.50196081399917603" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="9lC-sx-unI"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <color key="textColor" red="0.0019772407889999998" green="0.95599489800000004" blue="0.0030677278389999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ggY-tB-njR">
-                                <rect key="frame" x="20" y="70" width="60" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" backgroundImage="cardfront">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="touchCardButton:" destination="AGj-G5-JLf" eventType="touchUpInside" id="Swu-og-9uL"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OdH-Rt-hbb">
-                                <rect key="frame" x="93" y="70" width="60" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" backgroundImage="cardfront">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="touchCardButton:" destination="AGj-G5-JLf" eventType="touchUpInside" id="xiG-ut-df7"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ci3-kr-y2h">
-                                <rect key="frame" x="166" y="70" width="60" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" backgroundImage="cardfront">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="touchCardButton:" destination="AGj-G5-JLf" eventType="touchUpInside" id="Wxz-VW-gQa"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tjl-EX-m5z">
-                                <rect key="frame" x="240" y="70" width="60" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" backgroundImage="cardfront">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="touchCardButton:" destination="AGj-G5-JLf" eventType="touchUpInside" id="qMQ-aP-nli"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6OC-o4-ZQe">
-                                <rect key="frame" x="20" y="143" width="60" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" backgroundImage="cardfront">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="touchCardButton:" destination="AGj-G5-JLf" eventType="touchUpInside" id="nah-PL-9ad"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JqJ-HH-QjE">
-                                <rect key="frame" x="93" y="143" width="60" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" backgroundImage="cardfront">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="touchCardButton:" destination="AGj-G5-JLf" eventType="touchUpInside" id="0Ln-ZE-KZk"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aLs-qf-wRg">
-                                <rect key="frame" x="166" y="143" width="60" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" backgroundImage="cardfront">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="touchCardButton:" destination="AGj-G5-JLf" eventType="touchUpInside" id="IEV-DP-hm2"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MBk-mc-m3h">
-                                <rect key="frame" x="240" y="143" width="60" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" backgroundImage="cardfront">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="touchCardButton:" destination="AGj-G5-JLf" eventType="touchUpInside" id="cQy-Um-4Sv"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZJC-rS-p1c">
-                                <rect key="frame" x="20" y="216" width="60" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" backgroundImage="cardfront">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="touchCardButton:" destination="AGj-G5-JLf" eventType="touchUpInside" id="KV6-Gq-C8O"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NJn-Jr-N6G">
-                                <rect key="frame" x="93" y="216" width="60" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" backgroundImage="cardfront">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="touchCardButton:" destination="AGj-G5-JLf" eventType="touchUpInside" id="kuI-8A-5Vf"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fua-RN-JNN">
-                                <rect key="frame" x="166" y="216" width="60" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" backgroundImage="cardfront">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="touchCardButton:" destination="AGj-G5-JLf" eventType="touchUpInside" id="MaX-3A-WZQ"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="idm-dH-IpL">
-                                <rect key="frame" x="240" y="216" width="60" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" backgroundImage="cardfront">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="touchCardButton:" destination="AGj-G5-JLf" eventType="touchUpInside" id="XLN-n8-cOD"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IL1-lk-oum">
-                                <rect key="frame" x="20" y="289" width="60" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" backgroundImage="cardfront">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="touchCardButton:" destination="AGj-G5-JLf" eventType="touchUpInside" id="JgZ-gv-BGG"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8qH-nn-XN9">
-                                <rect key="frame" x="93" y="289" width="60" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" backgroundImage="cardfront">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="touchCardButton:" destination="AGj-G5-JLf" eventType="touchUpInside" id="nX8-4V-G5D"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5ll-d4-MCZ">
-                                <rect key="frame" x="166" y="289" width="60" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" backgroundImage="cardfront">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="touchCardButton:" destination="AGj-G5-JLf" eventType="touchUpInside" id="wxb-Xu-IOZ"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Av-JV-br1">
-                                <rect key="frame" x="240" y="289" width="60" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" backgroundImage="cardfront">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="touchCardButton:" destination="AGj-G5-JLf" eventType="touchUpInside" id="1vb-EG-0oo"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NWU-1G-BUw">
-                                <rect key="frame" x="20" y="362" width="70" height="31"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NWU-1G-BUw">
+                                <rect key="frame" x="20" y="364" width="70" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.0019772407889999998" green="0.95599489800000004" blue="0.0030677278389999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="70" id="QQI-GV-aHx"/>
+                                </constraints>
                                 <state key="normal" title="Deal">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -696,95 +175,83 @@
                                     <action selector="resetUI:" destination="AGj-G5-JLf" eventType="touchUpInside" id="pPL-oP-lF8"/>
                                 </connections>
                             </button>
+                            <collectionView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="5Sm-79-J5Q">
+                                <rect key="frame" x="20" y="28" width="280" height="328"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="0.25098040700000002" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ZAP-7l-YtD">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="SetCellID" id="K7h-4f-9EK">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jsw-FB-VzM">
+                                <rect key="frame" x="98" y="364" width="64" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="64" id="THY-Eu-wIl"/>
+                                </constraints>
+                                <state key="normal" title="Cards">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="moreCards:" destination="AGj-G5-JLf" eventType="touchUpInside" id="Fdn-SH-792"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.0" green="0.50196081399917603" blue="0.25098040699958801" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.25098040700000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="5Sm-79-J5Q" secondAttribute="trailing" constant="20" symbolic="YES" id="0A6-i7-ma8"/>
+                            <constraint firstItem="czQ-NP-Muv" firstAttribute="leading" secondItem="NWU-1G-BUw" secondAttribute="leading" id="0q8-Ik-b1X"/>
+                            <constraint firstItem="czQ-NP-Muv" firstAttribute="trailing" secondItem="gSl-sQ-G6C" secondAttribute="trailing" id="5vJ-wC-MEM"/>
+                            <constraint firstItem="jsw-FB-VzM" firstAttribute="centerY" secondItem="NWU-1G-BUw" secondAttribute="centerY" id="6M7-G8-jiX"/>
+                            <constraint firstItem="5Sm-79-J5Q" firstAttribute="leading" secondItem="1U6-80-Ytn" secondAttribute="leading" constant="20" symbolic="YES" id="8Cl-Y2-82Q"/>
+                            <constraint firstAttribute="trailing" secondItem="czQ-NP-Muv" secondAttribute="trailing" constant="20" symbolic="YES" id="Ahj-ud-3fT"/>
+                            <constraint firstItem="czQ-NP-Muv" firstAttribute="leading" secondItem="1U6-80-Ytn" secondAttribute="leading" constant="20" symbolic="YES" id="NaD-l9-Q3R"/>
+                            <constraint firstItem="czQ-NP-Muv" firstAttribute="top" secondItem="NWU-1G-BUw" secondAttribute="bottom" constant="8" symbolic="YES" id="SQF-x1-vwx"/>
+                            <constraint firstItem="jsw-FB-VzM" firstAttribute="leading" secondItem="NWU-1G-BUw" secondAttribute="trailing" constant="8" symbolic="YES" id="X7b-DL-TE9"/>
+                            <constraint firstItem="jsw-FB-VzM" firstAttribute="centerY" secondItem="gSl-sQ-G6C" secondAttribute="centerY" id="e2M-kb-KCq"/>
+                            <constraint firstItem="ypp-uj-CwQ" firstAttribute="top" secondItem="czQ-NP-Muv" secondAttribute="bottom" constant="20" symbolic="YES" id="mNP-Nc-Nlm"/>
+                            <constraint firstItem="5Sm-79-J5Q" firstAttribute="top" secondItem="Tmt-kL-EU1" secondAttribute="bottom" constant="20" symbolic="YES" id="qxj-VB-7og"/>
+                            <constraint firstItem="NWU-1G-BUw" firstAttribute="top" secondItem="5Sm-79-J5Q" secondAttribute="bottom" constant="8" symbolic="YES" id="rBh-Di-aGy"/>
+                            <constraint firstAttribute="centerX" secondItem="czQ-NP-Muv" secondAttribute="centerX" id="wM6-Pc-4CZ"/>
+                        </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Set Game" id="TVN-4H-SEw"/>
                     <navigationItem key="navigationItem" title="Set Game" id="6vN-TH-AyG">
-                        <barButtonItem key="rightBarButtonItem" title="History" id="PLg-fj-1HE">
-                            <connections>
-                                <segue destination="1Bb-Dz-AuM" kind="push" id="BsW-UE-aWe"/>
-                            </connections>
-                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="History" id="PLg-fj-1HE"/>
                     </navigationItem>
+                    <size key="freeformSize" width="320" height="568"/>
                     <connections>
+                        <outlet property="grid" destination="5Sm-79-J5Q" id="Vpf-R9-fTF"/>
+                        <outlet property="moreCards" destination="jsw-FB-VzM" id="5kg-tC-tx5"/>
                         <outlet property="msgArea" destination="czQ-NP-Muv" id="F7l-jp-1dl"/>
                         <outlet property="scoreLabel" destination="gSl-sQ-G6C" id="Hx7-9F-inn"/>
-                        <outletCollection property="cardButtons" destination="ggY-tB-njR" id="xfk-00-1Yx"/>
-                        <outletCollection property="cardButtons" destination="OdH-Rt-hbb" id="7RY-VO-0NV"/>
-                        <outletCollection property="cardButtons" destination="ci3-kr-y2h" id="B56-pE-a1b"/>
-                        <outletCollection property="cardButtons" destination="Tjl-EX-m5z" id="3x1-84-W07"/>
-                        <outletCollection property="cardButtons" destination="6OC-o4-ZQe" id="zKH-4T-Efe"/>
-                        <outletCollection property="cardButtons" destination="JqJ-HH-QjE" id="NpQ-qw-UcA"/>
-                        <outletCollection property="cardButtons" destination="aLs-qf-wRg" id="iaN-h3-kKC"/>
-                        <outletCollection property="cardButtons" destination="MBk-mc-m3h" id="hgu-bU-pNl"/>
-                        <outletCollection property="cardButtons" destination="ZJC-rS-p1c" id="FWW-kR-0oT"/>
-                        <outletCollection property="cardButtons" destination="NJn-Jr-N6G" id="w61-Li-bDP"/>
-                        <outletCollection property="cardButtons" destination="fua-RN-JNN" id="7Va-5w-WFA"/>
-                        <outletCollection property="cardButtons" destination="idm-dH-IpL" id="X8h-c4-4jC"/>
-                        <outletCollection property="cardButtons" destination="5Av-JV-br1" id="tUr-Ga-Mvd"/>
-                        <outletCollection property="cardButtons" destination="5ll-d4-MCZ" id="nTk-Fp-Koe"/>
-                        <outletCollection property="cardButtons" destination="8qH-nn-XN9" id="d67-CZ-PFB"/>
-                        <outletCollection property="cardButtons" destination="IL1-lk-oum" id="wIh-8D-3nZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zE3-vl-Sik" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="89" y="-141"/>
-        </scene>
-        <!--Navigation Controller - Card Game-->
-        <scene sceneID="3F4-JI-MIm">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="URs-ea-OMW" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Card Game" id="BgJ-g5-dNC">
-                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="0.0"/>
-                    </tabBarItem>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="NLu-hj-Sn0">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="Bjk-km-G3I"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Qyo-3t-hTR" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-437" y="-754"/>
-        </scene>
-        <!--Navigation Controller - Set Game-->
-        <scene sceneID="Fcl-oB-KWw">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="bzG-6Q-8Da" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Set Game" id="i95-qO-kgK">
-                        <inset key="imageInsets" minX="10" minY="10" maxX="10" maxY="10"/>
-                    </tabBarItem>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="2ZZ-Tp-POQ">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="AGj-G5-JLf" kind="relationship" relationship="rootViewController" id="Jd6-lu-e2W"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ZIO-nn-yNH" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-437" y="-141"/>
+            <point key="canvasLocation" x="-565" y="125"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="cardback" width="105" height="150"/>
-        <image name="cardfront" width="64" height="96"/>
-    </resources>
-    <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+    <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
-    <inferredMetricsTieBreakers>
-        <segue reference="BsW-UE-aWe"/>
-    </inferredMetricsTieBreakers>
 </document>

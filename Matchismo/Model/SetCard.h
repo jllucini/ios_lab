@@ -10,14 +10,22 @@
 
 @interface SetCard : Card
 
-@property (strong, nonatomic) NSString *shape;
+@property (strong, nonatomic) NSNumber *shape;
 @property (nonatomic) NSNumber *number;
 @property (strong, nonatomic) NSString *color;
-@property (strong, nonatomic) NSString *shading;
+@property (strong, nonatomic) NSNumber *shading;
+
+#define SHAPE_OVAL 1
+#define SHAPE_DIAMOND 2
+#define SHAPE_SQUIGGLE 3
+#define SHADING_SOLID 1
+#define SHADING_STRIPED 2
+#define SHADING_OPEN 3
+
 
 +(NSArray *)validShapes;
 +(NSArray *)validNumbers;
 +(NSDictionary *)validColors;
-+(NSDictionary *)validShadings;
++(NSArray *)validShadings;
 
 @end

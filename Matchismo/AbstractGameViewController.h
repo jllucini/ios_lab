@@ -8,18 +8,20 @@
 
 #import <UIKit/UIKit.h>
 #import "CardMatchingGame.h"
-#import "HistoryViewController.h"
 
 @interface AbstractGameViewController : UIViewController
 
-@property (strong, nonatomic) NSArray *cardButtons;
+@property (strong, nonatomic) Deck *deck;
 @property (strong, nonatomic) CardMatchingGame *game;
 @property (weak, nonatomic) IBOutlet UILabel *scoreLabel;
 @property (weak, nonatomic) IBOutlet UILabel *msgArea;
-@property (strong, nonatomic) NSMutableString *scoreHistory;
+@property (weak, nonatomic) IBOutlet UICollectionView *grid;
+@property (nonatomic) NSUInteger numCards;
 
 -(Deck *)createDeck;
 -(void)updateUI:(BOOL)firstTime;
 -(NSUInteger)gameMode;
+//-(void)setTapGesture;
+//-(void)tap:(UITapGestureRecognizer *)tapgr;
 
 @end

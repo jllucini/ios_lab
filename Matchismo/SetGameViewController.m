@@ -8,40 +8,120 @@
 
 #import "SetGameViewController.h"
 #import "SetCardDeck.h"
+#import "SetCardView.h"
 #import "SetCard.h"
 
 @interface SetGameViewController ()
-@property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *cardButtons;
+
+@property (weak, nonatomic) IBOutlet UICollectionView *grid;
+@property (weak, nonatomic) IBOutlet UIButton *moreCards;
+@property (nonatomic, strong) UIDynamicAnimator *animator;
+
 @end
 
 @implementation SetGameViewController
 
-// Subclassing AbstractGameViewController
-
-- (IBAction)touchCardButton:(UIButton *)sender
+-(UIDynamicAnimator *)animator
 {
-    NSUInteger chosenButtonIndex = [self.cardButtons indexOfObject:sender];
-    [self.game chooseCardAtIndex:chosenButtonIndex];
-    [self recordHistory];
-    [self updateUI:NO];
+    if (!_animator){
+        _animator = [[UIDynamicAnimator alloc]initWithReferenceView:self.grid];
+    }
+    return _animator;
 }
 
--(void)recordHistory
+// Implementing Gesture recognizers
+-(void)setTapGesture
 {
-    if (self.game.scoreHelper.lastScore != 0) {
-        for (SetCard *card in self.game.scoreHelper.cards){
-            [self.scoreHistory appendFormat:@"%@", card.contents];
+    UITapGestureRecognizer *tapgr = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tap:)];
+    [self.grid addGestureRecognizer:tapgr];
+}
+
+-(void)tap:(UITapGestureRecognizer *)tapgr
+{
+    CGPoint tapoint = [tapgr locationInView:self.grid];
+    NSIndexPath *tappedCellPath = [self.grid indexPathForItemAtPoint:tapoint];
+    
+    if (tappedCellPath)
+    {
+        [self.grid selectItemAtIndexPath:tappedCellPath
+                                          animated:YES
+                                    scrollPosition:UICollectionViewScrollPositionBottom];
+        [self.game chooseCardAtIndex:tappedCellPath.item];
+        [self updateUI:NO];
+        
+    }
+        
+}
+
+- (IBAction)moreCards:(id)sender
+{
+    NSArray *cards = [self.game moreCards:3 usingDeck:self.deck];
+       
+    if (cards){
+        for (SetCard *card in cards) {
+            self.numCards += 1;
+            SetCardView *scv = [[SetCardView alloc]init];
+            [scv setupViewWithCard:card];
+            [self.grid insertItemsAtIndexPaths:
+             [NSArray arrayWithObject:[NSIndexPath indexPathForItem:self.numCards-1 inSection:0]]];
         }
-        [self.scoreHistory appendFormat:@"\nScore:%d Total Score: %d\n", self.game.scoreHelper.lastScore, self.game.scoreHelper.totalScore];
     }
 }
+
+// Subclassing UICollectionView
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+    if ([self respondsToSelector:@selector(setEdgesForExtendedLayout:)]) {
+        [self setEdgesForExtendedLayout:UIRectEdgeNone];
+    }
+    self.numCards = 12;
+    UICollectionViewFlowLayout *layout=[[UICollectionViewFlowLayout alloc] init];
+    [layout setScrollDirection:UICollectionViewScrollDirectionVertical];
+    [self.grid setCollectionViewLayout:layout];
+    [self.grid setDataSource:self];
+    [self.grid setDelegate:self];
+    self.grid.alwaysBounceVertical = YES;
+    [self.grid registerClass:[SetCardView class] forCellWithReuseIdentifier:@"SetCellID"];
+    [self setTapGesture];
+}
+
+-(NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
+    return 1;
+}
+
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
+{
+    return self.numCards;
+}
+
+// The cell that is returned must be retrieved from a call to -dequeueReusableCellWithReuseIdentifier:forIndexPath:
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    SetCardView *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"SetCellID" forIndexPath:indexPath];
+    SetCard *card = [self.game cardAtIndex:indexPath.item];
+    [cell setupViewWithCard:card];
+    
+    return cell;
+}
+
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    return CGSizeMake(50, 50);
+}
+
+
+
+// Subclassing AbstractGameViewController
 
 -(IBAction)resetUI:(UIButton *)sender
 {
     self.scoreLabel.text = @"Score Set: 0";
     self.msgArea.text = @"";
     self.game = nil;
-    [self.scoreHistory deleteCharactersInRange:NSMakeRange(0, [self.scoreHistory length])];
+    self.deck = nil;
+    self.numCards = 12;
+    [self.grid reloadData];
     [self updateUI:YES];
 }
 
@@ -57,58 +137,33 @@
 
 -(void)updateUI:(BOOL)firstTime
 {
-    for (UIButton *cardButton in self.cardButtons){
-        int cardButtonIndex = [self.cardButtons indexOfObject:cardButton];
-        SetCard *card = [self.game cardAtIndex:cardButtonIndex];
-        [cardButton setAlpha: [card isChosen] && !card.isMatched ? 0.8 : 1.0];
-        if ([card isChosen] || firstTime)
-        {
-            NSMutableAttributedString *nsmas = [self formatButton:card];
-            [cardButton setAttributedTitle:nsmas forState:UIControlStateNormal];
+    NSMutableArray *matchedCards = [[NSMutableArray alloc]init];
+    NSMutableIndexSet *indexSet  = [[NSMutableIndexSet alloc]init];
+    for (int ix = 0; ix < [self.grid numberOfItemsInSection:0];ix++)
+    {
+        NSIndexPath *myIP =  [NSIndexPath indexPathForItem:ix inSection:0];
+        SetCard *card = [self.game cardAtIndex:ix];
+        SetCardView *scview = (SetCardView *)[self.grid cellForItemAtIndexPath:myIP];
+        [scview setAlpha: [card isChosen] && !card.isMatched ? 0.8 : 1.0];
+        if (card.isChosen && card.isMatched){
+            [matchedCards addObject:myIP];
+            [indexSet addIndex:ix];
+            card.chosen = FALSE;
         }
-        cardButton.enabled = !card.isMatched;
-        self.scoreLabel.text = [NSString stringWithFormat:@"Score Set: %d", self.game.scoreHelper.totalScore];
+        self.scoreLabel.text = [NSString stringWithFormat:@"Score: %d", self.game.scoreHelper.totalScore];
         self.msgArea.text = self.game.scoreHelper.descr;
     }
-}
-
-// Instance methods
--(NSMutableAttributedString *)formatButton:(SetCard *)card
-{
-    NSMutableString *fillString = [NSMutableString stringWithString:card.shape];
     
-    if ([card.number intValue] > 1){
-        [fillString appendString:card.shape];
+    // Remove MAtched Cards
+    
+    if ([matchedCards count] == 3){
+        [self.grid performBatchUpdates:^{
+            self.numCards -= 3;
+            [self.game removeCardsAtIndex:indexSet];
+            [self.grid deleteItemsAtIndexPaths:matchedCards];
+            } completion:^(BOOL finished) {
+        }];
     }
-    if ([card.number intValue] > 2){
-        [fillString appendString:card.shape];
-    }
-    
-    NSMutableAttributedString *nsmas = [[NSMutableAttributedString alloc] initWithString:fillString];
-    CIColor *cicolor = [CIColor colorWithString:card.color];
-    UIColor *uicolor = [UIColor colorWithCIColor:cicolor];
-    [nsmas setAttributes:@{NSForegroundColorAttributeName : uicolor,
-                           NSFontAttributeName: [UIFont preferredFontForTextStyle:UIFontTextStyleBody]}
-                   range:NSMakeRange(0, [fillString length] )] ;
-    
-    if ([card.shading isEqualToString:@"open"]){
-        [nsmas setAttributes: @{NSForegroundColorAttributeName : [UIColor whiteColor],
-                                NSStrokeWidthAttributeName:@-5,
-                                NSStrokeColorAttributeName:uicolor,
-                                }
-                       range:NSMakeRange(0, [fillString length])];
-    }
-    
-    if ([card.shading isEqualToString:@"striped"]){
-        [nsmas setAttributes: @{NSForegroundColorAttributeName : [UIColor whiteColor],
-                                NSStrokeWidthAttributeName:@-5,
-                                NSStrokeColorAttributeName:uicolor,
-                                NSStrikethroughColorAttributeName: uicolor,
-                                NSStrikethroughStyleAttributeName:@(NSUnderlineStyleSingle) }
-                       range:NSMakeRange(0, [fillString length])];
-    }
-    
-    return nsmas;
 }
 
 @end

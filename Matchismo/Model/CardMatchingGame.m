@@ -15,7 +15,6 @@
 
 @implementation CardMatchingGame
 
-
 -(NSMutableArray *)cards
 {
     if (!_cards) _cards = [[NSMutableArray alloc] init];
@@ -55,7 +54,6 @@
 }
 
 static const int MATCH_BONUS = 4;
-static const int COST_TO_CHOOSE = 1;
 
 -(void)chooseCardAtIndex:(NSUInteger)index
 {
@@ -93,16 +91,11 @@ static const int COST_TO_CHOOSE = 1;
                     for (Card *otherCard in otherCards) {
                         otherCard.chosen = NO;
                     }
-                    if ([matchMessage length] > 0) {
-                        [matchMessage appendFormat:@" %d point penalty!", MISMATCH_PENALTY];
-                    } else {
-                        [matchMessage appendFormat:@"Cards don't match, %d point penalty!", MISMATCH_PENALTY];
-                    }
+                    [matchMessage appendFormat:@" %d point penalty!", MISMATCH_PENALTY];
                 }
 
             }
             // Not needed in this assignment
-            // self.score -= COST_TO_CHOOSE;
             card.chosen = YES;
         }
     }
@@ -112,5 +105,34 @@ static const int COST_TO_CHOOSE = 1;
     [self.scoreHelper setData:totalScore lastScore:matchScore descr:matchMessage cards:otherCards];
 }
 
+
+-(NSArray *)moreCards:(NSUInteger)numCards usingDeck:(Deck *)deck;
+{
+    NSMutableArray *result = nil;
+    for (int i = 0; i < numCards; i++){
+        Card *card = [deck drawRandomCard];
+        if (card){
+            [self.cards addObject:card];
+            if (!result){
+                result = [[NSMutableArray alloc]init];
+            }
+            [result addObject:card];
+        } else {
+            break;
+        }
+        
+    }
+    return result;
+}
+
+-(NSUInteger)numberOfCards
+{
+    return [self.cards count];
+}
+
+-(void)removeCardsAtIndex:(NSIndexSet *)index
+{
+    [self.cards removeObjectsAtIndexes:index];
+}
 
 @end

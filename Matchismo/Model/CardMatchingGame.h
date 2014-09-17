@@ -19,8 +19,12 @@
 
 -(void)chooseCardAtIndex:(NSUInteger)index;
 -(id)cardAtIndex:(NSUInteger)index;
+-(NSArray *)moreCards:(NSUInteger )numCards usingDeck:(Deck *)deck;
+-(NSUInteger)numberOfCards;
+-(void)removeCardsAtIndex:(NSIndexSet *)index;
 
 @property (nonatomic) NSUInteger gameMode;
+@property (nonatomic, readonly) NSString *scoreDescr;
 @property (nonatomic, readonly) ScoreHelper *scoreHelper;
 
 @end

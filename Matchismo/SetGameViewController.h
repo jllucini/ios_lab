@@ -8,6 +8,6 @@
 
 #import "AbstractGameViewController.h"
 
-@interface SetGameViewController : AbstractGameViewController
+@interface SetGameViewController : AbstractGameViewController<UICollectionViewDataSource,UICollectionViewDelegateFlowLayout>
 
 @end

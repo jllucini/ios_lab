@@ -18,7 +18,7 @@
     {
         for (NSNumber *number in [SetCard validNumbers])
         {
-            for (NSString *shape in [SetCard validShapes])
+            for (NSNumber *shape in [SetCard validShapes])
             {
                 for (NSString *shading in [SetCard validShadings])
                 {

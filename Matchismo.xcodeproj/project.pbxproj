@@ -30,8 +30,13 @@
 		8875452519977C130077410B /* SetCardDeck.m in Sources */ = {isa = PBXBuildFile; fileRef = 8875452419977C130077410B /* SetCardDeck.m */; };
 		887545281998207C0077410B /* SetGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 887545271998207C0077410B /* SetGameViewController.m */; };
 		8875452B19994ED30077410B /* AbstractGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8875452A19994ED30077410B /* AbstractGameViewController.m */; };
-		889DBCF519A0A4BE001EB04E /* HistoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 889DBCF419A0A4BE001EB04E /* HistoryViewController.m */; };
 		889DBCF819A15875001EB04E /* ScoreHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 889DBCF719A15875001EB04E /* ScoreHelper.m */; };
+		889DBCFD19A8E651001EB04E /* PlayingCardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 889DBCFC19A8E651001EB04E /* PlayingCardView.m */; };
+		889DBD0019B32D92001EB04E /* SetCardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 889DBCFF19B32D92001EB04E /* SetCardView.m */; };
+		889DBD0319B3344B001EB04E /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 889DBD0219B3344B001EB04E /* TestViewController.m */; };
+		889DBD0719B34E83001EB04E /* OvalsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 889DBD0619B34E83001EB04E /* OvalsView.m */; };
+		889DBD0A19BA5C0E001EB04E /* DiamondsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 889DBD0919BA5C0E001EB04E /* DiamondsView.m */; };
+		889DBD0D19BB1BA6001EB04E /* SquigglesView.m in Sources */ = {isa = PBXBuildFile; fileRef = 889DBD0C19BB1BA6001EB04E /* SquigglesView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,10 +87,20 @@
 		887545271998207C0077410B /* SetGameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetGameViewController.m; sourceTree = "<group>"; };
 		8875452919994ED30077410B /* AbstractGameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AbstractGameViewController.h; sourceTree = "<group>"; };
 		8875452A19994ED30077410B /* AbstractGameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AbstractGameViewController.m; sourceTree = "<group>"; };
-		889DBCF319A0A4BE001EB04E /* HistoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HistoryViewController.h; sourceTree = "<group>"; };
-		889DBCF419A0A4BE001EB04E /* HistoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HistoryViewController.m; sourceTree = "<group>"; };
 		889DBCF619A15875001EB04E /* ScoreHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ScoreHelper.h; path = Matchismo/Model/ScoreHelper.h; sourceTree = "<group>"; };
 		889DBCF719A15875001EB04E /* ScoreHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ScoreHelper.m; path = Matchismo/Model/ScoreHelper.m; sourceTree = "<group>"; };
+		889DBCFB19A8E643001EB04E /* PlayingCardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayingCardView.h; sourceTree = "<group>"; };
+		889DBCFC19A8E651001EB04E /* PlayingCardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayingCardView.m; sourceTree = "<group>"; };
+		889DBCFE19B32D92001EB04E /* SetCardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetCardView.h; sourceTree = "<group>"; };
+		889DBCFF19B32D92001EB04E /* SetCardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetCardView.m; sourceTree = "<group>"; };
+		889DBD0119B3344B001EB04E /* TestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
+		889DBD0219B3344B001EB04E /* TestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestViewController.m; sourceTree = "<group>"; };
+		889DBD0519B34E83001EB04E /* OvalsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OvalsView.h; path = SetCardHelperViews/OvalsView.h; sourceTree = "<group>"; };
+		889DBD0619B34E83001EB04E /* OvalsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OvalsView.m; path = SetCardHelperViews/OvalsView.m; sourceTree = "<group>"; };
+		889DBD0819BA5C0E001EB04E /* DiamondsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DiamondsView.h; path = SetCardHelperViews/DiamondsView.h; sourceTree = "<group>"; };
+		889DBD0919BA5C0E001EB04E /* DiamondsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DiamondsView.m; path = SetCardHelperViews/DiamondsView.m; sourceTree = "<group>"; };
+		889DBD0B19BB1BA6001EB04E /* SquigglesView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SquigglesView.h; path = SetCardHelperViews/SquigglesView.h; sourceTree = "<group>"; };
+		889DBD0C19BB1BA6001EB04E /* SquigglesView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SquigglesView.m; path = SetCardHelperViews/SquigglesView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,11 +160,16 @@
 		88593E661991738500C19703 /* Matchismo */ = {
 			isa = PBXGroup;
 			children = (
+				889DBCFC19A8E651001EB04E /* PlayingCardView.m */,
+				889DBCFB19A8E643001EB04E /* PlayingCardView.h */,
+				889DBCFE19B32D92001EB04E /* SetCardView.h */,
+				889DBCFF19B32D92001EB04E /* SetCardView.m */,
+				889DBD0419B34E47001EB04E /* SetCardHelperViews */,
 				88593E721991738500C19703 /* Main.storyboard */,
-				889DBCF319A0A4BE001EB04E /* HistoryViewController.h */,
-				889DBCF419A0A4BE001EB04E /* HistoryViewController.m */,
 				8875452919994ED30077410B /* AbstractGameViewController.h */,
 				8875452A19994ED30077410B /* AbstractGameViewController.m */,
+				889DBD0119B3344B001EB04E /* TestViewController.h */,
+				889DBD0219B3344B001EB04E /* TestViewController.m */,
 				887545261998207C0077410B /* SetGameViewController.h */,
 				887545271998207C0077410B /* SetGameViewController.m */,
 				88593E751991738500C19703 /* CardGameViewController.h */,
@@ -214,6 +234,19 @@
 			);
 			name = Model;
 			path = ..;
+			sourceTree = "<group>";
+		};
+		889DBD0419B34E47001EB04E /* SetCardHelperViews */ = {
+			isa = PBXGroup;
+			children = (
+				889DBD0819BA5C0E001EB04E /* DiamondsView.h */,
+				889DBD0919BA5C0E001EB04E /* DiamondsView.m */,
+				889DBD0B19BB1BA6001EB04E /* SquigglesView.h */,
+				889DBD0C19BB1BA6001EB04E /* SquigglesView.m */,
+				889DBD0519B34E83001EB04E /* OvalsView.h */,
+				889DBD0619B34E83001EB04E /* OvalsView.m */,
+			);
+			name = SetCardHelperViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -318,15 +351,20 @@
 				887545281998207C0077410B /* SetGameViewController.m in Sources */,
 				88593E711991738500C19703 /* CardGameAppDelegate.m in Sources */,
 				88593E771991738500C19703 /* CardGameViewController.m in Sources */,
+				889DBD0719B34E83001EB04E /* OvalsView.m in Sources */,
+				889DBCFD19A8E651001EB04E /* PlayingCardView.m in Sources */,
 				889DBCF819A15875001EB04E /* ScoreHelper.m in Sources */,
 				88593E6D1991738500C19703 /* main.m in Sources */,
 				88593E9B19920E8D00C19703 /* PlayingCard.m in Sources */,
-				889DBCF519A0A4BE001EB04E /* HistoryViewController.m in Sources */,
 				8875451F1993D8C90077410B /* CardMatchingGame.m in Sources */,
+				889DBD0019B32D92001EB04E /* SetCardView.m in Sources */,
+				889DBD0A19BA5C0E001EB04E /* DiamondsView.m in Sources */,
 				8875452519977C130077410B /* SetCardDeck.m in Sources */,
 				88593EA41992170600C19703 /* PlayingCardDeck.m in Sources */,
 				88593EA1199213AC00C19703 /* Deck.m in Sources */,
 				88593E9719920B8300C19703 /* Card.m in Sources */,
+				889DBD0D19BB1BA6001EB04E /* SquigglesView.m in Sources */,
+				889DBD0319B3344B001EB04E /* TestViewController.m in Sources */,
 				887545221997616F0077410B /* SetCard.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
